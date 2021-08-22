@@ -7,9 +7,8 @@ class Car < Transport
 
   def initialize
     super( Constants::CAR[:max_weight], Constants::CAR[:speed],true )
-    @registration_number = rand(50)
+    @registration_number = rand(5000)
   end
-
 
 end
 

@@ -3,7 +3,7 @@ require_relative 'car'
 
 class DeliveryService
 
-  attr_accessor :bikes, :cars
+  attr_reader :bikes, :cars
 
   def initialize(cars, bikes)
     @cars = Array.new(cars) { Car.new }
@@ -44,11 +44,8 @@ class DeliveryService
       'Available transport not found'
     end
   end
+
 end
 
-# d = DeliveryService.new(5,2)
-# p d.find_transport(6,25)
-
-p Car.new <=> (Bike.new)
 
 
