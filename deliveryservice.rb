@@ -31,7 +31,7 @@ class DeliveryService
     if package_weight <= Constants::CAR[:max_weight]
       available_cars = []
       cars_number.each do |a|
-        if a.available == true
+        if a.available
         available_cars.push(a)
         end
       end

@@ -6,7 +6,11 @@ class Transport
     @available = available
   end
 
-  attr_accessor :available,:speed, :max_weight
+  attr_reader :available, :speed, :max_weight
+
+  def max_weight_value
+    max_weight if max_weight > 0
+  end
 
   def delivery_time(distance)
     distance / speed.to_f
