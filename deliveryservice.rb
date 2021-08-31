@@ -5,9 +5,9 @@ class DeliveryService
 
   attr_reader :bikes_number, :cars_number
 
-  def initialize(cars_number, bikes_number)
-    @cars_number = Array.new(cars_number) { Car.new }
-    @bikes_number = Array.new(bikes_number) { Bike.new }
+  def initialize
+    @cars_number = Array.new(Constants::CAR[:count]) { Car.new }
+    @bikes_number = Array.new(Constants::BIKE[:count]) { Bike.new }
 
   end
 
