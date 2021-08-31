@@ -25,9 +25,19 @@ class DeliveryService
     package_weight <= Constants::CAR[:max_weight] && available_cars.any? ? available_cars.first : nil
   end
 
-
-
 end
+
+# p d = DeliveryService.new(1,2)
+#
+# p d.find_transport(7,8)
+#
+# p Car.new <=> (Bike.new)
+
+p c = Car.new
+
+p c.speed_with_kg
+
+
 
 
 

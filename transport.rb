@@ -29,6 +29,10 @@ class Transport
     @max_distance || Float::INFINITY
   end
 
+  def speed_with_kg
+    @speed.to_f / @max_weight
+  end
+
 end
 
 
