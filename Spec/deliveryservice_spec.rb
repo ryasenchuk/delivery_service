@@ -22,5 +22,5 @@ describe DeliveryService do
     end
   end
 
-  
+
 end
