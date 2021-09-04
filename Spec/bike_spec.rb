@@ -8,14 +8,6 @@ describe Bike do
   let(:max_weight) {Constants::BIKE[:max_weight] }
   let(:max_distance) {Constants::BIKE[:max_distance] }
 
-
-
-  describe '.new' do
-    it do
-      expect(bike).to be_instance_of(Bike)
-    end
-  end
-
   describe '#available' do
     it do
       expect(bike.available).to be_truthy
@@ -57,7 +49,6 @@ describe Bike do
 
     it do
       allow(bike).to receive(:speed_with_kg).and_return(result)
-
       expect(bike.speed_with_kg).to eq(1)
     end
   end

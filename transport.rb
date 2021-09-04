@@ -18,18 +18,18 @@ class Transport
   end
 
   def <=>(other)
-    (comparison_max_w == other.comparison_max_w) ? (comparison_max_d <=> other.comparison_max_d) : (comparison_max_w <=> other.comparison_max_w)
+    (comparison_max_weight == other.comparison_max_weight) ? (comparison_max_distance <=> other.comparison_max_distance) : (comparison_max_weight <=> other.comparison_max_weight)
   end
 
-  def comparison_max_w
+  def comparison_max_weight
     @max_weight
   end
 
-  def comparison_max_d
-    @max_distance || Float::INFINITY
+  def comparison_max_distance
+    Float::INFINITY if Transport.respond_to?(max_distance)
   end
 
-  def speed_with_kg
+  def speed
     @speed.to_f / @max_weight
   end
 

@@ -7,14 +7,6 @@ describe Car do
   let(:speed) {Constants::CAR[:speed] }
   let(:max_weight) {Constants::CAR[:max_weight] }
 
-
-
-  describe '.new' do
-    it do
-      expect(car).to be_instance_of(Car)
-    end
-  end
-
   describe '#available' do
     it do
       expect(car.available).to be_truthy
