@@ -29,7 +29,7 @@ class Transport
     Float::INFINITY if Transport.respond_to?(max_distance)
   end
 
-  def speed
+  def speed_by_weight
     @speed.to_f / @max_weight
   end
 

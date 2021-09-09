@@ -44,12 +44,12 @@ describe Bike do
     let(:result) { (bike.speed.to_f / bike.max_weight).round(2) }
 
     it do
-      expect(bike.speed_with_kg).to be_kind_of(Float)
+      expect(bike.speed_by_weight).to be_kind_of(Float)
     end
 
     it do
-      allow(bike).to receive(:speed_with_kg).and_return(result)
-      expect(bike.speed_with_kg).to eq(1)
+      allow(bike).to receive(:speed_by_weight).and_return(result)
+      expect(bike.speed_by_weight).to eq(1)
     end
   end
 

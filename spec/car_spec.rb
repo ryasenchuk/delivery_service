@@ -43,13 +43,13 @@ describe Car do
     let(:result) { (car.speed.to_f / car.max_weight).round(2) }
 
     it do
-      expect(car.speed_with_kg).to be_kind_of(Float)
+      expect(car.speed_by_weight).to be_kind_of(Float)
     end
 
     it do
-      allow(car).to receive(:speed_with_kg).and_return(result)
+      allow(car).to receive(:speed_by_weight).and_return(result)
 
-      expect(car.speed_with_kg).to eq(0.5)
+      expect(car.speed_by_weight).to eq(0.5)
     end
   end
 
