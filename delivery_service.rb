@@ -2,7 +2,7 @@ require_relative 'bike'
 require_relative 'car'
 require_relative 'transport'
 
-class DeliveryService
+class DeliveryService < Transport
 
   attr_reader :transport_park
 
